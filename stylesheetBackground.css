@@ -1,0 +1,84 @@
+h1,h2,h3,h4 {
+	text-align:center;
+}
+
+table, th, td {
+   	border: 1px solid black;
+}
+
+th,td{
+	height: 40px;
+	width:10%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4F6D7A;
+    width:100%;
+}
+li {
+    float: left;
+    border-left:1px solid #f1f1f2;
+    border-right:1px solid #f1f1f2;
+}
+
+li:last-child {
+    border-left:1px solid #f1f1f2;
+    border-right: 1px solid #f1f1f2;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 24px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color:  #BCBABE;
+}
+
+.active {
+    background-color: #8d230f;
+}
+body {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url('calendarBackground.jpg');
+    background-repeat: no-repeat;
+    background-size: 50% 80%;
+    background-attachment: fixed;
+    background-position: 0px 100px;
+    font-family: Georgia;
+    font-size: 3vh; 
+}
+img {
+    top: 100px;
+    display: inline-block;  
+    max-width: 20%;  
+    max-height: 20%; 
+    vertical-align:middle;
+}
+div.right {
+   float: right;
+   max-width:40%;
+   max-height:40%;
+   right: 20%;
+   top: 24%;
+   position: absolute;
+}
+.ex1 {
+    font-family: Georgia;
+    font-size: 8vh; 
+    line-height: 110%
+}
+
+
