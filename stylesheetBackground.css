@@ -1,11 +1,21 @@
-h1,h2,h3,h4 {
+h1 {
 	text-align:center;
 }
 
 table, th, td {
    	border: 1px solid black;
 }
+.float_center {
+  float: right;
 
+  position: relative;
+  left: -50%; /* or right 50% */
+  text-align: left;
+}
+.float_center > .child {
+  position: relative;
+  left: 50%;
+}
 th,td{
 	height: 40px;
 	width:10%;
@@ -19,7 +29,7 @@ ul {
     width:100%;
 }
 li {
-    float: left;
+    float:left;
     border-left:1px solid #f1f1f2;
     border-right:1px solid #f1f1f2;
 }
@@ -44,21 +54,27 @@ li a:hover:not(.active) {
 .active {
     background-color: #8d230f;
 }
+.side{
+    width: 45%;
+    display: inline-block;
+}
+.imgSide1{
+    width: 100%;
+    padding-left:450px;
+}
+.imgSide{
+    width: 100%;
+}
 body {
-    text-align: center;
     width: 100%;
     height: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-image: url('calendarBackground.jpg');
-    background-repeat: no-repeat;
-    background-size: 50% 80%;
-    background-attachment: fixed;
-    background-position: 0px 100px;
     font-family: Georgia;
-    font-size: 3vh; 
+    font-size: 3vh;
+}
+p,h2{
+    width:1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 img {
     top: 100px;
@@ -66,6 +82,9 @@ img {
     max-width: 20%;  
     max-height: 20%; 
     vertical-align:middle;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 div.right {
    float: right;

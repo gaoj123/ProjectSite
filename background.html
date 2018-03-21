@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Background</title>
+  <link rel='stylesheet' type='text/css' href='stylesheetBackground.css'>
+</head>
+<body>
+  <div class="float_center">
+  <ul class="child">
+    <li><a href="home.html">Home</a></li>
+    <li><a class="active" href="background.html">Background</a></li>
+    <li><a href="formula.html">PageRank Formula</a></li>
+    <li><a href="iterate.html">How It Works</a></li>
+    <li><a href="matrix.html">Matrices</a></li>
+  </ul>
+  </div><br><br><br>
+  <h1>Background</h1>
+  <h2>The Need to Rank Pages</h2>
+  <p>Search engines display pages relevant for your search.  But how does it really work?</p>
+  <p>In the early 90s, the first search engines used text based ranking systems, where the engine counts the occurrences of the key words in each web file. Pages with the highest number of occurrences of the key words were displayed.  However, this would not display the best results; e.g. you search &quot; dog &quot; and get a site with the word &quot; dog &quot; a billion times and nothing else.
+  </p>
+  <p>The usefulness of a search engine depends on the relevance of its results, and one of the best known algorithms for computing the relevance of pages is the PageRank algorithm used by the Google search engine. 
+  </p>
+  <h2>Basic Concept</h2>
+  <p>PageRank algorithm determines the importance of websites by counting the number and quality of links to a page.  It is assumed that more important websites are likely to have more sites linking to it.
+  </p>
+  <h2>Graph Representation of the WWW</h2>
+  <p>The World Wide Web hyperlink structure forms a huge directed graph where nodes represent webpages and edges represent the hyperlinks
+  </p>
+  <img src="WWW.png" style="width:100%;max-width:600px">
+  <p><b>Inbound links/backlinks:</b> links to this page from other sites
+  </p>
+  <p><b>Outgoing/outbound links:</b> links from this page to other sites</p>
+  <p><b>Dangling links:</b> links that point to pages with no outgoing links</p>
+  <h2>Translating Pages to Nodes</h2>
+  <div class="side">
+    <img src="Pages.png" class="imgSide1" style="width:100%;max-width:500px"></div>
+  <div class="side">
+    <img src="nodes.png" class="imgSide" style="width:100%;max-width:500px">
+  </div><br><br>
+  <p style="text-align:center"><a href="#">Go to top</a></p>
+</body>
+</html>
