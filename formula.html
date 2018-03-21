@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formula</title>
+  <link rel='stylesheet' type='text/css' href='stylesheetBackground.css'>
+</head>
+<body>
+  <div class="float_center">
+  <ul class="child">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="background.html">Background</a></li>
+    <li><a class="active" href="formula.html">Google PageRank Formula</a></li>
+    <li><a href="iterate.html">How It Works</a></li>
+    <li><a href="example.html">Example Using Iterative Formula</a></li>
+    <li><a href="matrix.html">Matrices</a></li>
+  </ul>
+  </div><br><br><br>
+  <h1>Google PageRank Algorithm Formula</h1>
+  <img src="simpleFormula.png" style="width:100%;max-width:800px"><br>
+  <p><b>PR(A) -</b> PageRank of a WebPage A</p>
+  <p><b>PR(Tn)/C(Tn) -</b> the importance transferred from other pages linking to it
+  </p>
+  <p><b>d(...) - </b>All these fractions of votes are added together but, to stop the other pages having too much influence on the page&apos;s rank, this total vote is &quot;damped down&quot; by multiplying it by a factor &quot;d&quot; (e.g. 0.85)
+  </p>
+  <p><b>(1 - d) - </b> The (1 &minus; d) at the beginning adds in the bit lost by the d(...) so that the sum of all web pages&apos; PageRanks will be one. It also means that if a page has no links to it (no backlinks) even then it will still get a small PR</p>
+  <br><p><b>Note: </b>The formula displayed above is the original version; using that formula would make it so that the sum of all webpages is N (number of webpages).  Meanwhile, the second version just has one small change, where (1 &minus; d) is changed to (1 &minus; d)/n; this makes it so that the sum of all the webpages is 1.</p>
+   <p style="text-align:center"><a href="#">Go to top</a>	&nbsp;	&nbsp;	&nbsp;<a href="iterate.html">How It Works</a></p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Iteration</title>
+  <link rel='stylesheet' type='text/css' href='stylesheetBackground.css'>
+</head>
+<body>
+  <div class="float_center">
+  <ul class="child">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="background.html">Background</a></li>
+    <li><a href="formula.html">Google PageRank Formula</a></li>
+    <li><a class="active" href="iterate.html">How It Works</a></li>
+    <li><a href="example.html">Example Using Iterative Formula</a></li>
+    <li><a href="matrix.html">Matrices</a></li>
+  </ul>
+  </div><br><br><br>
+  <h1>Iteration</h1>
+  <p>Calculating the PR of one page depends on the PRs of the pages linking to this page, but we don&apos;t know the PR of any page.</p>
+<p>Thus, we assign an initial rank and then repeatedly use this iterative formula until convergence: 
+</p>
+<img src="for.png" style="width:100%;max-width:400px"><br><br><br>
+<div class="side">
+    <img src="Ex1.png" class="imgSide1" style="width:100%;max-width:300px"></div>
+  <div class="side">
+<p><b>PRt+1 (Pi)</b> = PR of a page (let&apos;s say &quot;A&quot;) in next iteration</p>
+<p><b>PRt (Pj)</b> = current PR of page linking to &quot;A&quot; <p>
+<p><b>C(Pj)</b> = number of outgoing links for page linking to &quot;A&quot;</p>
+<p>Do this for all pages linking to &quot;A&quot;</p>
+  </div>
+  <h2>Reasoning Behind Iterative Formula</h2>
+  <p>PageRank algorithm determines the relevance of a page by examining the importance of pages linking to it.</p>
+<p>The <b>PRt (Pj) / C(Pj)</b> basically represents the transferring of authority from the page linking to &quot;A&quot; (in this case &quot;C&quot; since it&apos;s the only page with a link to &quot;A&quot;) to &quot;A&quot;</p>
+  <p>e.g. one component when calculating the PR of &quot;B&quot; is PR(A) / 2 [Because &quot;A&quot; has two outgoing links, it is passing on ½ of its importance to &quot;B&quot;]</p>
+  <br><p><b>Note: </b>The page rank of a website does not just depend on the number of pages linking to it; it also depends on the importance of the pages linking to this website. Thus, even if you create many pages linking to your site, your site won&apos;t have a drastically higher page rank since the many pages you just created don&apos;t have high importance.</p>
+  <p style="text-align:center"><a href="#">Go to top</a>&nbsp;	&nbsp;	&nbsp;<a href="example.html">Example</a></p>
+
+</body>
+</html>
