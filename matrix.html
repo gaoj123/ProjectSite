@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Matrices</title>
+  <link rel='stylesheet' type='text/css' href='stylesheetBackground.css'>
+</head>
+<body>
+  <div class="float_center">
+  <ul class="child">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="background.html">Background</a></li>
+    <li><a href="formula.html">Google PageRank Formula</a></li>
+    <li><a href="iterate.html">How It Works</a></li>
+    <li><a href="example.html">Example Using Iterative Formula</a></li>
+    <li><a class="active" href="matrix.html">Matrices</a></li>
+  </ul>
+  </div><br><br><br>
+  <h1>Matrices</h1>
+  <h2>Set of Webpages and its Transition Matrix</h2>
+  <div class="side">
+    <img src="graph.png" class="imgSide1" style="width:100%;max-width:500px"></div>
+  <div class="side">
+    <img src="transitionMatrix.png" class="imgSide" style="width:100%;max-width:300px">
+  </div><br><br>
+  <p>Each node is represented by a column; node 1=1st col, node 2=2nd col, etc.</p>
+<p>Each col shows how much importance a node is transferring to other nodes (e.g. node 2 transfers 1/2 to node 3 and 1/2 to node 4 (look at 3rd/4th rows of col 2).
+</p><br><hr>
+<h2>Vectors</h2>
+<img src="vectors.png" style="width:100%;max-width:800px"></div>
+<p>The sequence v, Av, ..., A<sup>k</sup>v tends to the equilibrium value v = (matrix in red). We call this the PageRank vector of our web graph.
+</p>
+<p>Initial rank vector v shows each page starting out with 1/4 importance</p>
+<p>Each incoming link increases the importance of a web page, so at step 1, we update the rank of each page by adding to the current value the importance of the incoming links. This is the same as multiplying the matrix A with v . The new importance vector is v<sub>1</sub> = Av. Iterating the process, the next updated importance vector is v<sub>2</sub> = A(Av) = A<sup>2</sup>v.
+</p>
+<p>
+  The Page Rank vector v (red) we have computed indicates that page 1 is the most relevant page. This might seem surprising since page 1 has 2 backlinks, while page 3 has 3 backlinks. </p>
+<p>However, if we take a look at the graph, we see that node 3 has only one outgoing edge to node 1, so it transfers all its importance to node 1. Once a web surfer visits page 3, he/she can only go to page 1. 
+</p>
+<br><hr>
+<h2>Problem with Dangling Nodes</h2>
+<img src="dan.png" style="width:100%;max-width:500px"></div>
+<p>Node 3 is a dangling node with no outgoing links.</p>
+<p>If we iteratively compute the ranks, we get:</p>
+<img src="dan2.png" style="width:100%;max-width:900px"></div>
+<p>It now seems as if all the pages have rank 0.  To address this issue, we can just replace the column corresponding to the dangling node 3 with a column vector with all entries 1/3. In this way, the importance of node 3 would be equally redistributed among the other nodes of the graph, instead of being lost.
+</p>
+  <p style="text-align:center"><a href="#">Go to top</a></p>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example</title>
+  <link rel='stylesheet' type='text/css' href='stylesheetBackground.css'>
+</head>
+<body>
+  <div class="float_center">
+  <ul class="child">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="background.html">Background</a></li>
+    <li><a href="formula.html">Google PageRank Formula</a></li>
+    <li><a href="iterate.html">How It Works</a></li>
+    <li><a class="active" href="example.html">Example Using Iterative Formula</a></li>
+    <li><a href="matrix.html">Matrices</a></li>
+  </ul>
+  </div><br><br><br>
+  <h1>Example Using Iterative Formula</h1>
+  <img src="Ex1.png" style="width:100%;max-width:400px"><br>
+  <h2>Iteration 0</h2>
+  <table>
+    <tr><th></th><th>Iteration 0</th></tr>
+    <tr><td>A</td><td>1/4</td></tr>
+    <tr><td>B</td><td>1/4</td></tr>
+    <tr><td>C</td><td>1/4</td></tr>
+    <tr><td>D</td><td>1/4</td></tr>
+  </table>
+  <p>Each page starts out with 1/n as its PR, where n is the number of pages
+  </p><br><hr>
+   <h2>Iteration 1</h2>
+  <table>
+    <tr><th></th><th>Iteration 1</th></tr>
+    <tr><td>A</td><td>1/12</td></tr>
+    <tr><td>B</td><td>2.5/12</td></tr>
+    <tr><td>C</td><td>4.5/12</td></tr>
+    <tr><td>D</td><td>4/12</td></tr>
+  </table>
+  <p>PR(A) = PR(C)/C(C) = (1/4)/3 = 1/12</p>
+<p>	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp; PR of C is 1/4 ; C has 3 outgoing links</p>
+<p>PR(B) = PR(A)/C(A) + PR(C)/C(C) = (1/4)/2 +(1/4)/3 = 2.5/12</p>
+<p>PR(C) = PR(A)/C(A) + PR(D)/C(D) = (1/4)/2 + (1/4)/1 = 4.5/12</p>
+  <p>PR(D) = PR(C)/C(C) + PR(B)/C(B) = (1/4)/3 + (1/4)/1 = 4/12</p>
+  <br><hr>
+   <h2>Iteration 2</h2>
+  <table>
+    <tr><th></th><th>Iteration 2</th></tr>
+    <tr><td>A</td><td>1.5/12</td></tr>
+    <tr><td>B</td><td>2/12</td></tr>
+    <tr><td>C</td><td>4.5/12</td></tr>
+    <tr><td>D</td><td>4/12</td></tr>
+  </table>
+  <p>PR(A) = PR(C)/C(C) = (4.5/12)/3 = 1.5/12</p>
+<p>&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;PR of C is 4.5/12; C has 3 outgoing links</p>
+<p>PR(B) = PR(A)/C(A) + PR(C)/C(C) = (1/12)/2 +(4.5/12)/3 = 2/12</p>
+<p>PR(C) = PR(A)/C(A) + PR(D)/C(D) = (1/12)/2 + (4/12)/1 = 4.5/12</p>
+<p>PR(D) = PR(C)/C(C) + PR(B)/C(B) = (4.5/12)/3 + (2.5/12)/1 = 4/12</p>
+<br><hr>
+<p>We can keep repeating this procedure to get more stable values but let&apos;s look at ranks so far (Iteration 2).</p>
+<p>Higher values mean greater importance of webpages.</p>
+<p>Therefore, the pages in order of importance are: C, D, B, and A.
+</p>
+  <p style="text-align:center"><a href="#">Go to top</a>&nbsp;	&nbsp;	&nbsp;<a href="matrix.html">Matrix Representation</a></p>
+</body>
+</html>

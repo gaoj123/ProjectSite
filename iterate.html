@@ -23,15 +23,15 @@
 <div class="side">
     <img src="Ex1.png" class="imgSide1" style="width:100%;max-width:300px"></div>
   <div class="side">
-<p><b>PRt+1 (Pi)</b> = PR of a page (let&apos;s say &quot;A&quot;) in next iteration</p>
-<p><b>PRt (Pj)</b> = current PR of page linking to &quot;A&quot; <p>
-<p><b>C(Pj)</b> = number of outgoing links for page linking to &quot;A&quot;</p>
+<p><b>PR<sub>t+1</sub> (P<sub>i</sub>)</b> = PR of a page (let&apos;s say &quot;A&quot;) in next iteration</p>
+<p><b>PR<sub>t</sub> (P<sub>j</sub>)</b> = current PR of page linking to &quot;A&quot; <p>
+<p><b>C(P<sub>j</sub>)</b> = number of outgoing links for page linking to &quot;A&quot;</p>
 <p>Do this for all pages linking to &quot;A&quot;</p>
-  </div>
+  </div><br><hr>
   <h2>Reasoning Behind Iterative Formula</h2>
   <p>PageRank algorithm determines the relevance of a page by examining the importance of pages linking to it.</p>
-<p>The <b>PRt (Pj) / C(Pj)</b> basically represents the transferring of authority from the page linking to &quot;A&quot; (in this case &quot;C&quot; since it&apos;s the only page with a link to &quot;A&quot;) to &quot;A&quot;</p>
-  <p>e.g. one component when calculating the PR of &quot;B&quot; is PR(A) / 2 [Because &quot;A&quot; has two outgoing links, it is passing on ½ of its importance to &quot;B&quot;]</p>
+<p>The <b>PR<sub>t</sub> (P<sub>j</sub>) / C(P<sub>j</sub>)</b> basically represents the transferring of authority from the page linking to &quot;A&quot; (in this case &quot;C&quot; since it&apos;s the only page with a link to &quot;A&quot;) to &quot;A&quot;</p>
+  <p>e.g. one component when calculating the PR of &quot;B&quot; is PR(A) / 2 [Because &quot;A&quot; has two outgoing links, it is passing on 1/2 of its importance to &quot;B&quot;]</p>
   <br><p><b>Note: </b>The page rank of a website does not just depend on the number of pages linking to it; it also depends on the importance of the pages linking to this website. Thus, even if you create many pages linking to your site, your site won&apos;t have a drastically higher page rank since the many pages you just created don&apos;t have high importance.</p>
   <p style="text-align:center"><a href="#">Go to top</a>&nbsp;	&nbsp;	&nbsp;<a href="example.html">Example</a></p>
 
